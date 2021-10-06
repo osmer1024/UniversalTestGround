@@ -140,7 +140,7 @@ OpenSSH (v6)               ALLOW       Anywhere (v6)
 Nginx HTTP (v6)            ALLOW       Anywhere (v6)
 ```
 ## Status: Inactive
-If the status states inactive this means that the s, the firewall must be altered
+If the status states inactive this means that the firewall is not allowing traffic to pass, the firewall must be altered
 1. Setup default rules, setting outgoing rule:
 ```
 sudo ufw default allow outgoing
