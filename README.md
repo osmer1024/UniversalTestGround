@@ -10,12 +10,14 @@ sudo apt update
 sudo apt upgrade
 ```
 
+
 ## Installation
 1. Download PostgreSQL
 ```
 sudo apt install postgresql
 ```
 2. A prompt will continue, asking if you accept the usage of storage , press `y` and enter to accept
+
 
 ## Accessing Postgresql Server Remotely
 1. Currently Postgresql is only accessible locally. To allow remote access, changes to the `postgresql.conf` must be done. Open the file:
@@ -26,7 +28,8 @@ sudo vim /etc/postgresql/12/main/postgresql.conf
 ```
 listen_addresses = ‘*’
 ```
-3. Save changes with the wq commands in vim.
+3. Save changes with the `wq` commands in vim.
+
 
 ## Creating and Connecting Database
 1. Open and signin Postgresql:
@@ -60,6 +63,7 @@ or
 You are connected to database "pinkturtle" as user "postgres" via socket in "/var/run/postgresql" at port "5432".
 ```
 
+
 ## Creating and Setting Password a User
 1. Create a user and set its password:
 ```
@@ -80,12 +84,14 @@ exit
 ```
 
 
+
 # Setting up Nginx Web Server
 ## Update System
 1. Best to check for updates again:
 ```
 sudo apt update
 ```
+
 
 ## Installation
 1. Download Nginx, add the `-y` to immediately accept the download of the files:
@@ -134,7 +140,7 @@ OpenSSH (v6)               ALLOW       Anywhere (v6)
 Nginx HTTP (v6)            ALLOW       Anywhere (v6)
 ```
 ## Status: Inactive
-###If the status states inactive, the firewall must be altered
+If the status states inactive this means that the s, the firewall must be altered
 1. Setup default rules, setting outgoing rule:
 ```
 sudo ufw default allow outgoing
@@ -159,7 +165,7 @@ sudo ufw allow ssh
 ```
 sudo ufw enable
 ```
-7. Check status agasystemsysin:
+7. Check status again:
 ```
 sudo ufw status
 ```
@@ -192,14 +198,4 @@ hostname -I
 
 ## Viewing Nginx In Local Machine
 1. With the Ip address, place it in your browser and press enter.
-
-
-
-
-
-
-
-
-
-
-
+2. The 'Welcome to Nginx!' should popup in your browser
